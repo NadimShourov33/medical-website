@@ -1,0 +1,804 @@
+$primary: #1A77D1;
+$light: white;
+$gray: gray;
+
+
+// font-family: 'Handlee', cursive;
+// font-family: 'Montserrat', sans-serif;
+// font-family: 'Poppins', sans-serif;
+// font-family: 'Roboto', sans-serif;
+
+// mixin primary button
+@mixin button-style {
+    background-color: $primary;
+    color: $light;
+    font-size: 1rem;
+    font-weight: 700;
+    border: none;
+    border-radius: .5rem;
+    padding: .5rem 1rem;
+    background: linear-gradient(to right, coral 50%, #1A77D1 50%);
+    background-size: 250% 100%;
+    background-position: right;
+    transition: 1s;
+
+    &:hover {
+        background-position: left;
+        color: white;
+    }
+}
+
+@mixin bg-img {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+// reset code starts here
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.flex-around {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+hr {
+    color: $gray;
+    margin: 0;
+}
+
+.header-title {
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    img {
+        margin: .5rem 0;
+    }
+
+    h2 {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+        font-size: 2.2rem;
+    }
+
+    p {
+        font-family: 'Handlee', cursive;
+        font-size: 1.1rem;
+        color: gray;
+    }
+}
+
+// reset code ends here
+
+
+
+
+
+// header starts here
+// header top starts here
+header {
+    margin-bottom: 2rem;
+}
+
+.header-top {
+    gap: .5rem;
+    padding: 1rem 0;
+}
+
+.header-top a {
+    font-size: 1rem;
+    text-decoration: none;
+    padding: .5rem;
+    color: black;
+
+    &:hover {
+        color: $primary;
+    }
+
+    i {
+        font-size: 1rem;
+        color: $primary;
+    }
+}
+// header top ends here
+
+
+
+
+// navbar starts here
+.navbar-position{
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    box-shadow: 2px 2px 5px rgb(160, 158, 158);
+}
+
+.navbar-button {
+    @include button-style;
+}
+
+.navbar-style {
+    li {
+        a {
+            font-size: 1.2rem;
+            color: black;
+        }
+
+        &:hover {
+            color: coral;
+            text-decoration: underline;
+        }
+    }
+}
+// navbar ends here
+
+
+
+
+// banner section starts here
+.carousel-inner {
+    position: relative;
+}
+
+.banner-caption {
+    // margin-bottom: 11rem;
+    position: absolute;
+    top: 6rem;
+}
+
+.banner-header-span {
+    color: $primary;
+}
+
+.slider-btn {
+    @include button-style;
+}
+
+.banner-titale {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.banner-text {
+    font-size: 1rem;
+}
+// banner section ends here
+// header ends here
+
+
+
+
+// main starts here
+// card-section starts here
+.card-section-parents {
+    position: relative;
+    top: -13rem;
+    z-index: 1;
+    margin-bottom: 3rem;
+}
+
+.card-section {
+    width: 30%;
+    padding: 2rem;
+    color: $light;
+    background-color: $primary;
+    border-radius: 10px;
+    margin-top: 1.5rem;
+
+    h3 {
+        font-family: 'Roboto', sans-serif;
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        font-family: 'Poppins', sans-serif;
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    table {
+        margin-bottom: 1rem;
+    }
+}
+
+// card-section ends here
+
+
+
+// help-section starts here
+.help-section {
+    margin-top: -12rem;
+}
+
+.help-container-all {
+    margin: 3rem 0;
+}
+
+.help-container {
+    text-align: center;
+
+    i {
+        font-size: 2.5rem;
+        padding: 1.5rem 1.2rem;
+        color: $primary;
+        border: 1px solid gray;
+        border-radius: 100px;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        font-weight: bold;
+        padding: 1rem 0;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    &:hover .icon {
+        background-color: $primary;
+        color: $light;
+        border: none;
+    }
+
+    .icon-2 {
+        padding: 1.6rem 1.9rem;
+    }
+
+    .icon-3 {
+        padding: 1.6rem 1.5rem;
+    }
+}
+
+// help-section ends here
+
+
+
+// details-section starts here
+.details-section {
+    background-image: url(img/blockqoute-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 2.5rem;
+}
+
+.details-container {
+    background-color: $primary;
+    opacity: 0.8;
+    padding: 5rem 2rem;
+}
+
+.details-content {
+    text-align: center;
+    margin: 1.5rem 0;
+    color: $light;
+
+    &:hover i {
+        color: $primary;
+        background-color: $light;
+    }
+
+
+    i {
+        font-size: 1.8rem;
+        padding: 1.2rem;
+        border: 2px solid white;
+        border-radius: 100%;
+        margin: 0;
+    }
+
+    h3 {
+        font-size: 2rem;
+        font-weight: bold;
+        margin: 0.5rem 0;
+    }
+
+    p {
+        font-size: 1rem;
+        margin: 0;
+    }
+}
+
+// details-section ends here
+
+
+
+
+
+// offer services starts here
+.offer-section {
+
+    i {
+        font-size: 0.5rem;
+        color: $light;
+        background-color: $primary;
+        padding: 0.3rem;
+        border-radius: 100%;
+        margin-right: .5rem;
+    }
+
+    hr {
+        width: 5%;
+        border: none;
+        height: 2px;
+        margin-bottom: .5rem;
+        color: black;
+    }
+}
+
+// offer services ends here
+
+
+
+
+
+// emergency section starts here
+.emergency-section {
+    margin: 3.5rem 0;
+    background-image: url(img/call-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+
+
+    .emergency-container {
+        background-color: $primary;
+        opacity: 0.8;
+        padding: 6rem 0;
+    }
+
+    .emergency-containt {
+        width: 50%;
+        margin: auto;
+    }
+
+
+    h2 {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    button {
+        color: $primary;
+        font-size: 1rem;
+        font-weight: 700;
+        border: none;
+        border-radius: .5rem;
+        padding: .5rem 1rem;
+        background: linear-gradient(to right, coral 50%, white 50%);
+        background-size: 250% 100%;
+        background-position: right;
+        transition: 1s;
+
+        &:hover {
+            background-position: left;
+            color: white;
+        }
+    }
+}
+
+// emergency section ends here
+
+
+
+
+// health services starts here
+.health-serices {
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+
+    .health-container {
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+
+    i {
+        color: $primary;
+    }
+}
+// health services ends here
+
+
+
+
+// treatment section starts here
+.treatment-container {
+    width: 32%;
+    padding: 2rem;
+    margin: 2rem 0;
+    border: 1px solid rgb(204, 202, 202);
+    background-color: white;
+    
+
+    .treatment-contant {
+        i {
+            color: $primary;
+        }
+
+        .title {
+            font-size: 1.3rem;
+        }
+    }
+}
+
+.treatment-text{
+    margin: 2rem 0;
+}
+
+.treatment-button {
+    @include button-style;
+    width: 95%;
+    display: block;
+    margin: auto;
+}
+// treatment section ends here
+
+
+
+
+
+// medical news starts here
+.medical-news-section{
+    padding: 2rem 0 4rem 0;
+
+    .medical-news-card{
+        box-shadow: 5px 5px 20px rgb(197, 196, 196);
+        transition: .5s;
+        &:hover{
+            border-bottom: 3px solid #1A77D1;
+        }
+    }
+}
+// medical news ends here
+
+
+
+
+// appointment starts here
+.appointment{
+    form{
+
+        input, select, textarea{
+            border: 1px solid rgb(160, 159, 159);
+            border-radius: 5px;
+        }
+    }
+
+    button{
+        @include button-style;
+    }
+}
+// appointment ends here
+
+
+
+
+
+// sign up starts here
+.sing-up{
+    background-color: #EDF2FF;
+    padding: 5rem 0;
+
+
+    button{
+        @include button-style;
+    }
+
+    input{
+        border: 1px solid rgb(160, 159, 159);
+        border-radius: 5px;
+    }
+}
+// sign up ends here
+// main ends here
+
+
+
+
+// footer starts here
+footer{
+    background-color:  #176ABC;
+    padding: 4rem 0;
+
+    .about-us{
+        i{
+            border: 1px solid white;
+            border-radius: 50%;
+            padding: .6rem;
+            margin: .3rem;
+            &:hover{
+                color: #1A77D1;
+                background-color: white;
+            }
+        }
+    }
+
+    h5{
+        padding-bottom: .5rem;
+        border-bottom: 2px solid white;
+        display: inline-block;
+        margin-bottom: 1.8rem;
+    }
+
+
+    a{
+        color: $light;
+        text-decoration: none;
+        transition: 1s;
+
+        &:hover{
+            color: $light;
+        }
+    }
+
+    .newsletter{
+        input{
+            width: 90%;
+            color: white;
+            background: transparent;
+            border: 1px solid white;
+            border-bottom-left-radius: 5px;
+            border-top-left-radius: 5px;
+            margin: 0;
+        }
+        button{
+            border: 1px solid white;
+            border-bottom-right-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+
+        .btn-icon{
+            color: $primary;
+            padding: .8rem;
+            margin: 0;
+        }
+    }
+}
+
+.footer-bottom{
+    background-color: #1A76D1;
+
+    p{
+        font-size: 1rem;
+    }
+}
+
+
+// footer ends here
+
+
+
+
+
+
+
+// mediaquery responsive
+@media screen and (max-width:992px) {
+    .flex-around {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .navbar-style li {
+        text-align: center;
+
+        &:hover {
+            background-color: $primary;
+            border-radius: .5rem;
+        }
+    }
+
+    .banner-caption {
+
+        // margin-bottom: 8rem;
+    }
+
+    .banner-titale {
+        font-size: 2rem;
+    }
+
+    .banner-text {
+        font-size: 1rem;
+    }
+
+    .card-1 {
+        width: 48%;
+        float: left;
+    }
+
+    .card-2 {
+        width: 48%;
+        float: right;
+        margin-bottom: 1.5rem;
+    }
+
+    .card-3 {
+        width: 100%;
+        clear: both;
+    }
+
+    .card-section-parents {
+        position: static;
+    }
+
+    .header-title {
+        width: 80%;
+
+        h2 {
+            font-size: 1.7rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+    }
+
+    .help-section {
+        margin-top: 0;
+    }
+
+    .offer-section-img {
+        width: 95%;
+        height: auto;
+        display: block;
+        margin: auto;
+        margin-top: 1rem;
+    }
+
+    .emergency-section {
+
+        .emergency-container {
+            padding: 4rem 0;
+        }
+
+        .emergency-containt {
+            width: 65%;
+            margin: auto;
+        }
+
+        h2 {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+    }
+
+    .health-serices {
+        .health-container {
+            grid-template-columns: auto auto;
+        }
+    }
+
+    .treatment-container{
+        width: 100%;
+    }
+
+  
+
+}
+
+
+@media screen and (max-width:768px) {
+    .banner-caption {
+        // margin-bottom: 3.5rem;
+        top: 1.5rem;
+    }
+
+    .banner-titale {
+        font-size: 2rem;
+    }
+
+    .banner-text {
+        font-size: .9rem;
+    }
+
+    .slider-btn {
+        font-weight: normal;
+        font-size: small;
+    }
+
+    .card-section {
+        width: 100%;
+    }
+
+    .emergency-section {
+
+        .emergency-containt {
+            width: 80%;
+            margin: auto;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+    }
+
+    .health-serices {
+        .health-container {
+            grid-template-columns: auto;
+        }
+    }
+}
+
+
+@media screen and (max-width:576px) {
+
+    .banner-caption {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .banner-titale {
+        font-size: 1rem;
+        margin-bottom: .5rem;
+    }
+
+    .banner-text {
+        font-size: .7rem;
+        margin-bottom: .5rem;
+    }
+
+    .card-section {
+        padding: 1rem;
+
+        h3 {
+            font-size: 1.5rem;
+        }
+    }
+
+
+    .header-title {
+        width: 85%;
+
+        h2 {
+            font-size: 1.3rem;
+        }
+
+        p {
+            font-size: .9rem;
+            color: black;
+        }
+    }
+
+    .emergency-section {
+
+        .emergency-containt {
+            width: 90%;
+            margin: auto;
+        }
+
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: normal;
+        }
+
+        button {
+            margin: .5rem;
+        }
+
+    }
+
+}
